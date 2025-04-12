@@ -1,0 +1,16 @@
+-- Main SELECT query using all components
+
+SELECT 
+    s.StudentID,
+    s.FirstName + ' ' + s.LastName AS FullName,
+    s.Major,
+    dbo.GetGPAForStudent(s.StudentID) AS GPA,
+    ve.CourseName,
+    ve.FacultyFullName,
+    ve.Semester,
+    ve.Grade
+FROM Students s
+INNER JOIN Enrollments e ON s.StudentID = e.StudentID
+INNER JOIN vw_StudentEnrollmentDetails ve ON ve.StudentID = s.StudentID
+WHERE e.Semester = 'Fall 2024'
+ORDER BY s.StudentID, ve.CourseName;

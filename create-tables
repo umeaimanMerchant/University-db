@@ -1,0 +1,45 @@
+-- create a database for a university system
+-- This script creates a database for a university system with tables for Students, Faculty, Courses, and Enrollments.
+-- Drop existing tables if they exist
+
+DROP TABLE IF EXISTS Enrollments;
+DROP TABLE IF EXISTS Courses;
+DROP TABLE IF EXISTS Faculty;
+DROP TABLE IF EXISTS Students;
+
+
+-- Create Students table
+CREATE TABLE Students (
+    StudentID INT PRIMARY KEY IDENTITY(1,1),
+    FirstName NVARCHAR(50),
+    LastName NVARCHAR(50),
+    DOB DATE,
+    Major NVARCHAR(50)
+);
+
+-- Create Faculty table
+CREATE TABLE Faculty (
+    FacultyID INT PRIMARY KEY IDENTITY(1,1),
+    FirstName NVARCHAR(50),
+    LastName NVARCHAR(50),
+    Department NVARCHAR(50)
+);
+
+-- Create Courses table
+CREATE TABLE Courses (
+    CourseID INT PRIMARY KEY IDENTITY(1,1),
+    CourseName NVARCHAR(100),
+    FacultyID INT FOREIGN KEY REFERENCES Faculty(FacultyID),
+    Credits INT
+);
+
+-- Create Enrollments table
+CREATE TABLE Enrollments (
+    EnrollmentID INT PRIMARY KEY IDENTITY(1,1),
+    StudentID INT FOREIGN KEY REFERENCES Students(StudentID),
+    CourseID INT FOREIGN KEY REFERENCES Courses(CourseID),
+    Semester NVARCHAR(20),
+    Grade CHAR(2)
+);
+
+
