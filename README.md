@@ -26,6 +26,9 @@ This solution is deployed on an **Azure Cloud SQL Database**, enabling:
 - Integration with external dashboards or APIs
 - Real-time querying through stored procedures and views
 
+<img width="1458" alt="Screenshot 2025-04-12 at 12 49 20 AM" src="https://github.com/user-attachments/assets/f2b166c8-cc0a-4462-a53d-95b052e259ba" />
+
+
 ---
 
 ## 📂 Schema Overview
@@ -62,6 +65,15 @@ This solution is deployed on an **Azure Cloud SQL Database**, enabling:
 
 ---
 
+## Query Results
+
+<img width="1458" alt="Screenshot 2025-04-12 at 12 49 20 AM" src="https://github.com/umeaimanMerchant/University-db/blob/main/images/Screenshot%202025-04-12%20at%2012.38.22%E2%80%AFAM.png" />
+
+<img width="1458" alt="Screenshot 2025-04-12 at 12 49 20 AM" src="https://github.com/umeaimanMerchant/University-db/blob/main/images/Screenshot%202025-04-12%20at%2012.39.39%E2%80%AFAM.png" />
+
+
+---
+
 ## 📌 Sample T-SQL Queries
 
 ```sql
@@ -74,4 +86,3 @@ SELECT dbo.GetGPAForStudent(1);
 -- Select from view
 SELECT * FROM vw_StudentEnrollmentDetails;
 
-![Output1]('/Users/umeaimanmerchant/Desktop/university-db/images/Screenshot 2025-04-12 at 12.38.22 AM.png')
