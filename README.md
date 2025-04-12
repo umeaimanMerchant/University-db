@@ -69,7 +69,7 @@ This solution is deployed on an **Azure Cloud SQL Database**, enabling:
 
 <img width="1458" alt="Screenshot 2025-04-12 at 12 49 20 AM" src="https://github.com/umeaimanMerchant/University-db/blob/main/images/Screenshot%202025-04-12%20at%2012.38.22%E2%80%AFAM.png" />
 
-<img width="1458" alt="Screenshot 2025-04-12 at 12 49 20 AM" src="https://github.com/umeaimanMerchant/University-db/blob/main/images/Screenshot%202025-04-12%20at%2012.39.39%E2%80%AFAM.png" />
+
 
 
 ---
